@@ -1,5 +1,6 @@
 const notes = [
-
+  'http is a protocol',
+  'http requests have a url, method, header, and body'
 ];
 
 const express = require('express')
