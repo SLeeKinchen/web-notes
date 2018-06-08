@@ -1,3 +1,5 @@
+const morgan = require('morgan');
+
 const notes = [
   'http is a protocol',
   'http requests have a url, method, header, and body'
@@ -7,6 +9,8 @@ const express = require('express')
 const app = express()
 
 // app.get('/', (req, res) => res.send('Hello World!'))
+app.use(morgan('tiny'));
+
 app.get('/', (req, res) => {
   res.render('notes', { notes: notes });
 });
